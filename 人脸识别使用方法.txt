@@ -1,0 +1,16 @@
+1. 准备训练图像
+训练用的图像存放在/home/sychen/FaceRecognition/dataset文件夹中。
+图像命名格式为Name.id.count.jpg
+Name不影响程序，但为了方便区分，建议就使用图片中人的名字；id是关键，同一个人的图片id必须一致；count是每个id的图片的计数。
+*训练图像要求：单人、单脸、尽量不要遮挡、不要戴眼镜、不要戴帽子
+
+2. 训练
+执行训练程序 
+python3 faceTraining.py
+运行结束生成训练结果：trainer.yml
+
+3. 识别
+打开文件faceRecognition.py，找到第53行 names = ['Bill_Duke', ......]
+这个list存放对应id的人的名字，从0开始。例如训练图像中id为0的人是Bill_Duke，第一个元素就填'Bill_Duke'
+保存，运行识别程序
+python3 faceRecognition.py
